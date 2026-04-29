@@ -1,0 +1,23 @@
+{
+  "skill_name": "follow-builders-universal",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我想每天早上 8 点看到 AI 圈最值得看的信息，重点是模型更新和开源项目，中文简报，按 模型/开源/产品/产业 分组。",
+      "expected_output": "Agent should parse cadence/language/grouping intent, run preparation workflow, and output grouped digest with links.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Use follow-builders to collect HN + GitHub + X updates for today. Keep it concise, English, and include actionable next steps for builders.",
+      "expected_output": "Agent should expand sources with HN/GitHub path, summarize in English, and add action suggestions.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "现在网络不稳定，你不要失败，优先用本地已有 feed 继续产出今天的 digest。",
+      "expected_output": "Agent should switch to local fallback pipeline and still generate a usable digest while noting data freshness constraints.",
+      "files": []
+    }
+  ]
+}
