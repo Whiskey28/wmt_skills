@@ -1,0 +1,41 @@
+{
+  "skill_name": "github-repo-evaluator",
+  "notes": "Manual or harness regression prompts; assertions optional.",
+  "evals": [
+    {
+      "id": "eval-enterprise-deps",
+      "prompt": "帮我按 S/A/B/C 评估 vercel/next.js，并给出是否适合企业生产依赖的结论；需要证据点。",
+      "expected_output": "Markdown 报告含四维分数、结论、风险与行动项；不臆造未验证数据。"
+    },
+    {
+      "id": "eval-fork-security",
+      "prompt": "我想二开 private-org/private-repo，重点看近 90 天活跃度、测试、CI、安全风险，输出 P0/P1/P2。",
+      "expected_output": "含采用建议；无法访问处写不可确认；不粘贴密钥。"
+    },
+    {
+      "id": "eval-compare",
+      "prompt": "技术选型：对比 foo/bar 与 baz/qux，用同一套加权模型各打一次分并表格式对比。",
+      "expected_output": "两仓独立评分+对比表+适用场景建议。"
+    },
+    {
+      "id": "eval-persist-clone-cli",
+      "prompt": "评估 owner/repo 并固化到 github_research；本地克隆到默认 CLONE_ROOT；需要终端则 30_cli_commands，否则 99_notes 写跳过。",
+      "expected_output": "落盘多文件；CLI 条件化；禁止删除克隆说明或遵守路径规则。"
+    },
+    {
+      "id": "eval-api-fallback",
+      "prompt": "我这边 gh 登不上、API 也 403，请仍基于克隆与本地 git 出尽调并固化。",
+      "expected_output": "声明证据来源为本地 git；远程缺口标不可确认。"
+    },
+    {
+      "id": "eval-doc-only",
+      "prompt": "评估一个几乎全是 .md 的文档仓库，固化；说明为何不生成 30_cli_commands。",
+      "expected_output": "99_notes 含 CLI 跳过理由；不生成空 30 文件。"
+    },
+    {
+      "id": "eval-skill-collection",
+      "prompt": "评估 mattpocock/skills 类技能集合仓库，给 S/A/B/C，注意 Skill-Collection 质量子项。",
+      "expected_output": "按 skill 结构评分；测试缺失不硬扣到 C 级唯一原因。"
+    }
+  ]
+}
